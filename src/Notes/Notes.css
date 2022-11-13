@@ -1,0 +1,27 @@
+.notes{
+    background-color: rgb(223, 216, 229);
+}
+h2.note {
+    font-size: 18px;
+    font-family: 'Dosis';
+    color: #e9ebec;
+    padding: 10px 9px;
+    border-bottom: 1px solid #e9ebec;
+}
+.notes {
+    width: 40%;
+    background-color: #595f68;
+}
+button.add-btn {
+    position: absolute;
+    top: 250px;
+    left: 195px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 21px;
+    font-weight: bold;
+    border: none;
+    background-color: #e01e30;
+    color: #fff;
+}
