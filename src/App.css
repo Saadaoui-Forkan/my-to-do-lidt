@@ -8,11 +8,11 @@
     display: flex;
 }
 .notes{
-    width: 40%;
+    width: 350px;
     background-color: #595f68;
 }
 .add-note-form{
-    width: 60%;
+    width: 600px;
     background-color: #fff;
 }
 

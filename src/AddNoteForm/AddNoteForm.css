@@ -2,6 +2,7 @@ form{
     display: flex;
     flex-direction: column;
     margin: 20px;
+    width: 500px;
 }
 .input{
     margin: 10px 20px;
@@ -24,6 +25,7 @@ form{
     font-weight: 400;
 }
 input.input-btn.input {
+    width: 280px;
     background: #28a745;
     color: #fff;
     font-weight: 800;
@@ -31,4 +33,15 @@ input.input-btn.input {
     letter-spacing: 2px;
     padding: 3px;
     border: 4px solid #28a745;
+    cursor: pointer;
+}
+
+.alert {
+    position: absolute;
+    color: #ffffff;
+    top: 5px;
+    right: 5px;
+    font-family: 'Dosis', sans-serif;
+    background: red;
+    padding: 10px;
 }
