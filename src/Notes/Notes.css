@@ -24,4 +24,5 @@ button.add-btn {
     border: none;
     background-color: #e01e30;
     color: #fff;
+    cursor: pointer;
 }

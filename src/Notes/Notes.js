@@ -1,14 +1,16 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Notes.css'
+import Note from './Note'
 
-function Notes() {
+function Notes({notes}) {
+  
   return (
     <div className='notes'>
-      <h2 className='note'>Note-1</h2>
-      <h2 className='note'>Note-1</h2>
-      <h2 className='note'>Note-1</h2>
-      <h2 className='note'>Note-1</h2>
-      <h2 className='note'>Note-1</h2>
+      { 
+        
+        (notes || []).map(note => <Note key={note.id} title={note.title} content={note.content}/>)
+        
+      }
       <button className='add-btn'>+</button>
     </div>
   )
