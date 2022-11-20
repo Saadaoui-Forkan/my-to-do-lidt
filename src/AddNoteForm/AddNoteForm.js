@@ -1,40 +1,8 @@
-import React , {useState} from 'react'
+import React , {} from 'react'
 import './AddNoteForm.css';
 import Alert from '../Alert/Alert' 
-import Notes from '../Notes/Notes'
 
-function AddNoteForm() {
-  const [title,setTitle] = useState('')
-  const [content,setContent] = useState('')
-  const [error,setError] = useState(false)
-  const [notes,setNotes] = useState([])
-
-  const handleChange_title = (e) => {
-    setTitle(e.target.value)
-  }
-  const handleChange_content = (e) => {
-    setContent(e.target.value)
-  }
-
-  const saveNoteHandler = (e) =>{
-    e.preventDefault()
-    if (title.length === 0 || content.length === 0) {
-      setError(true)
-    } else{
-
-      setError(false)
-
-      const note = {
-        id : new Date(),
-        title : title,
-        content : content
-      }
-
-      const updatedNotes = [...notes,note]
-
-      setNotes(updatedNotes)
-    }
-  }
+function AddNoteForm({saveNoteHandler,handleChangeTitle,handleChangeContent,title,content,error}) {
 
   return (
     <form>
@@ -43,7 +11,7 @@ function AddNoteForm() {
         type='text' 
         placeholder='title' 
         value={title}
-        onChange={handleChange_title}
+        onChange={handleChangeTitle}
         />
 
         <textarea 
@@ -52,7 +20,7 @@ function AddNoteForm() {
         placeholder='text' 
         rows='8' 
         value={content}
-        onChange={handleChange_content}
+        onChange={handleChangeContent}
         />
 
         <input 
