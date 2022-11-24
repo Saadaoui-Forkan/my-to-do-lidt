@@ -2,7 +2,9 @@ import React , {} from 'react'
 import './AddNoteForm.css';
 import Alert from '../Alert/Alert' 
 
-function AddNoteForm({saveNoteHandler,handleChangeTitle,handleChangeContent,title,content,error}) {
+function AddNoteForm(
+  {saveNoteHandler,handleChangeTitle,handleChangeContent,
+    title,content,error,editing,editNoteHandler,selectedNote}) {
 
   return (
     <form>
@@ -23,12 +25,21 @@ function AddNoteForm({saveNoteHandler,handleChangeTitle,handleChangeContent,titl
         onChange={handleChangeContent}
         />
 
-        <input 
-        className='input-btn input' 
-        type='submit' 
-        value='Save' 
-        onClick = {saveNoteHandler}
-        />
+        {
+          editing 
+          ? <input 
+              className='input-btn input' 
+              type='submit' 
+              value='Save' 
+              onClick = {saveNoteHandler}
+            /> 
+          : <input 
+              className='input-btn input' 
+              type='submit' 
+              value='Edit' 
+              onClick = {editNoteHandler}
+            />
+        }
 
         {error ? <Alert/> : ''}
 

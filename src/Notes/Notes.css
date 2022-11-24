@@ -1,7 +1,7 @@
 .notes{
     background-color: rgb(223, 216, 229);
 }
-h2.note {
+.note {
     font-size: 18px;
     font-family: 'Dosis';
     color: #e9ebec;
@@ -25,4 +25,8 @@ button.add-btn {
     background-color: #e01e30;
     color: #fff;
     cursor: pointer;
+}
+
+.note.active{
+    background-color: #6d5393;
 }

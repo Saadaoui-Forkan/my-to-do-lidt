@@ -1,9 +1,9 @@
 import React,{} from 'react'
 
-function Note({title}) {
+function Note({title,noteClicked,active}) {
     
   return (
-    <h2 className='note'>
+    <h2 className={`note `} onClick={noteClicked}>
         {title}
     </h2>
   )

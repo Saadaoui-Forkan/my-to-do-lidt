@@ -6,6 +6,7 @@
 .app{
     width: 100%;
     display: flex;
+    min-height: 65vh;
 }
 .notes{
     width: 350px;
